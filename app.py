@@ -19,7 +19,7 @@ async def lifespan(app: FastAPI):
     yield
     print('Выключение')
 
-app = FastAPI(title='dnd_master_helper', lifespan=lifespan)
+app = FastAPI(title='dnd_master_helper')
 
 origins = [
     "http://localhost",
