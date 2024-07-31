@@ -3,3 +3,5 @@ venv
 .env
 .env_prom
 test
+.idea
+__pycache__
