@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:16
+    container_name: db_postgres_dnd
+    env_file:
+      - .env_prom
+    ports:
+      - 1001:5432
+  app:
+    build:
+      context: .
+    env_file:
+      - .env_prom
+    container_name: fastapi_app
+    ports:
+      - 8000:8000
+
+
+#version: "3.9"
+#services:
+#  postgres:
+#    image: postgres:13.3
+#    environment:
+#      POSTGRES_DB: "habrdb"
+#      POSTGRES_USER: "habrpguser"
+#      POSTGRES_PASSWORD: "pgpwd4habr"
+#    ports:
+#      - "1001:5433"
