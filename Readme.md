@@ -14,7 +14,7 @@
 
 0) Нужно лишь раз для залогина:
 
-*docker login dnd-helper.cr.cloud.ru -u 946fc3614818fc753a24b8e252eb942e -p d50f543f58786e1dcc93b1e88fa5943c*
+
 
 1) docker build --tag dnd-helper.cr.cloud.ru/fastapi_app . --platform linux/amd64
 2) docker push dnd-helper.cr.cloud.ru/fastapi_app 
