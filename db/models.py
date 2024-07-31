@@ -8,7 +8,7 @@ from config import DB_NAME, DB_HOST, DB_PORT, DB_LOGIN, DB_PASSWORD
 
 
 
-engine = create_async_engine(f'postgresql+asyncpg://{DB_LOGIN}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}', future=True, echo=True)
+engine = create_async_engine(f'postgresql+asyncpg://{DB_LOGIN}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}', future=True, echo=True)
 
 
 class Model(DeclarativeBase):
