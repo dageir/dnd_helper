@@ -4,4 +4,3 @@ venv
 .env_prom
 test
 .idea
-__pycache__
