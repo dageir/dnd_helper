@@ -57,7 +57,7 @@ async def get_all_characters(db: AsyncSession = Depends(get_db)):
     return await _get_all_characters(db)
 
 
-@character_router.post('/upload_from_longstoryshort', response_model=SGameCharacterAdd)
+@character_router.post('/upload_from_longstoryshort', response_model=SGameCharacterGet)
 async def upload_longstory_file(file: UploadFile = File(...),
                                 is_bot: bool = True,
                                 db: AsyncSession = Depends(get_db)):
